@@ -18,10 +18,16 @@ return [
     ],
     'components' => [
         'request' => [
-            'csrfParam' => '_csrf-backend',
+            //'csrfParam' => '_csrf-backend',
             'parsers' =>[
                 'application/json' => 'yii\web\JsonParser',
             ]
+        ],
+        'response' => [
+            'format' => yii\web\Response::FORMAT_JSON,
+            'charset' => 'UTF-8',
+
+            // ...
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -47,10 +53,14 @@ return [
 
         'urlManager' => [
             'enablePrettyUrl' => true,
-            // 'enableStrictParsing' => true,
-            'showScriptName' => true,
+			'showScriptName' => true,
+			'enableStrictParsing' => false,
             'rules' => [
-                ['class' => 'yii\rest\UrlRule','controller'=>'user'],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller'=>['user'],
+                    'except' => ['create','view','update'],
+                ],
             ],
         ],
 

@@ -10,7 +10,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace common\models;
+namespace backend\moudles\api\models;
 
 use Yii;
 use yii\base\NotSupportedException;
@@ -52,6 +52,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             TimestampBehavior::className(),
+
         ];
     }
 
@@ -93,6 +94,7 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
+            [['username', 'email'], 'required'],
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
         ];
