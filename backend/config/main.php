@@ -13,7 +13,7 @@ return [
     'bootstrap' => ['log'],
     'modules' => [
         'api' => [
-            'class' => 'backend\moudles\api\Module',
+            'class' => 'backend\modules\api\Module',
         ],
     ],
     'components' => [
@@ -23,12 +23,12 @@ return [
                 'application/json' => 'yii\web\JsonParser',
             ]
         ],
-        'response' => [
-            'format' => yii\web\Response::FORMAT_JSON,
-            'charset' => 'UTF-8',
-
-            // ...
-        ],
+        // 'response' => [
+        //     'format' => yii\web\Response::FORMAT_JSON,
+        //     'charset' => 'UTF-8',
+        //
+        //     // ...
+        // ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,

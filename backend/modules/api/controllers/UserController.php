@@ -10,13 +10,13 @@
  * with this source code in the file LICENSE.
  */
 
-namespace backend\moudles\api\controllers;
+namespace backend\modules\api\controllers;
 
 use yii\rest\ActiveController;
 use yii\filters\VerbFilter;
 class UserController extends ActiveController
 {
-    public $modelClass = 'backend\moudles\api\models\User';
+    public $modelClass = 'backend\modules\api\models\User';
 
     public function behaviors()
     {
@@ -41,12 +41,12 @@ class UserController extends ActiveController
                'checkAccess' => [$this, 'checkAccess'],
            ],
            'view' => [
-               'class' => 'backend\moudles\api\actions\user\ViewAction',
+               'class' => 'backend\modules\api\actions\user\ViewAction',
                'modelClass' => $this->modelClass,
             //    'checkAccess' => [$this, 'checkAccess'],
            ],
            'create' => [
-               'class' => 'backend\moudles\api\actions\user\CreateAction',
+               'class' => 'backend\modules\api\actions\user\CreateAction',
                'modelClass' => $this->modelClass,
                'checkAccess' => [$this, 'checkAccess'],
                'scenario' => $this->createScenario,
