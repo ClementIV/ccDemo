@@ -7,7 +7,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
-
+use huynguyen\bootstrap-tagsinput;
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2099dd55ad0ea56853b9f025aa8e2928",
+    "content-hash": "7a920bc4fa41a9333127664cf62005cd",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -313,6 +313,30 @@
                 "html"
             ],
             "time": "2017-06-03T02:28:16+00:00"
+        },
+        {
+            "name": "huynguyen/bootstrap-tagsinput",
+            "version": "0.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/loi-chuanoi/bootstrap-tagsinput.git",
+                "reference": "d43c1479cd0d7885320c8fca3f838c2f4fa10d38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/loi-chuanoi/bootstrap-tagsinput/zipball/d43c1479cd0d7885320c8fca3f838c2f4fa10d38",
+                "reference": "d43c1479cd0d7885320c8fca3f838c2f4fa10d38",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Huy Nguyễn",
+                    "email": "huynguyen1059@gmail.com"
+                }
+            ],
+            "time": "2015-01-01T07:00:57+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
